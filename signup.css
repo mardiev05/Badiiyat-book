@@ -91,6 +91,10 @@ section {
     align-items: center;
     height: 100vh;
     background-color: #191919;
+    background-image: url(images/ornament.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: right;
 }
 
 .container {
