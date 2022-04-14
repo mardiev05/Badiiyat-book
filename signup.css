@@ -157,3 +157,139 @@ section {
 #account:hover {
     color: #C9AC8C;
 }
+
+
+/* media query */
+
+@media screen and (max-width: 1160px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container {
+        width: 31%;
+    }
+    .content__title {
+        font-weight: 400;
+        font-size: 31px;
+        line-height: 125%;
+    }
+    .content__text {
+        font-weight: 400;
+        font-size: 13.8px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 1085px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container {
+        width: 34%;
+    }
+    .content__title {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 125%;
+    }
+    .content__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container {
+        width: 38%;
+    }
+    .content__title {
+        font-weight: 400;
+        font-size: 29px;
+        line-height: 125%;
+    }
+    .content__text {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 902px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container {
+        width: 41%;
+    }
+    .content__title {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 125%;
+    }
+    .content__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 718px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container {
+        width: 45%;
+    }
+    .content__title {
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 125%;
+    }
+    .content__text {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container {
+        width: 48%;
+    }
+    .content__title {
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 125%;
+    }
+    .content__text {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 591px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container {
+        width: 50%;
+    }
+    .content__title {
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 125%;
+    }
+    .content__text {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
