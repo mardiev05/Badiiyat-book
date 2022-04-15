@@ -35,11 +35,14 @@
                 <p class="content__text">Do’stlaringiz nima o’qiyotganini ko’ring, kitob tavsiyalarini oling va kitob ustida zavqli suhbatlar uyushtiring</p>
             </div>
             <form id="form">
-                <input id="name" type="text" placeholder="Ism va Familiya">
-                <input id="email" type="email" placeholder="Elektron pochta">
-                <input id="name" type="tel" placeholder="Telefon">
-                <input id="password" type="password" placeholder="Parol">
-                <input id="password2" type="password" placeholder="Parol">
+                <input id="firstName" type="text" name="firstName" placeholder="Ism">
+                <input id="lastName" type="text" name="lastName" placeholder="Familiya">
+                <input id="email" type="email" name="email" placeholder="Elektron pochta">
+                <input id="tel" type="tel" name="tel" placeholder="Telefon">
+                <!-- <input id="address" type="text" name="address" placeholder="Address"> -->
+                <input id="password" type="password" name="password" placeholder="Parol">
+                <input id="password2" type="password" name="password2" placeholder="Parol">
+                <p id="password__msg"></p>
                 <button id="submit" type="submit">Ro’yxatdan o’tish</button>
                 <p>
                     <a id="account" href="#">Akkauntingiz bormi?</a>
@@ -47,6 +50,9 @@
             </form>
         </div>
     </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="signup.js"></script>
 </body>
 
 </html>
