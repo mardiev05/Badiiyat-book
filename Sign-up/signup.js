@@ -41,7 +41,9 @@ form.addEventListener("submit", function(e) {
                 text: "You have successfully registered",
                 footer: '<a href="">Why do I have this issue?</a>',
             });
-            // window.location.href = "login.html";
+            window.location.assign(
+                "http://127.0.0.1:5501/Home-page/home.html?search="
+            );
         } else {
             Swal.fire({
                 icon: "error",
