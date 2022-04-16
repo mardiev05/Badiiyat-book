@@ -40,7 +40,7 @@ header {
     color: var(--title);
 }
 
-ul {
+nav ul {
     display: flex;
     align-items: center;
     width: 100%;
@@ -118,6 +118,10 @@ main {
     transform: translateY(-35%);
 }
 
+.fa-magnifying-glass {
+    margin-right: 5px;
+}
+
 
 /* search form */
 
@@ -156,4 +160,116 @@ main {
     line-height: 16px;
     color: #3C2710;
     margin-left: 2%;
+    cursor: pointer;
+    opacity: .5;
+}
+
+#search__btn:hover {
+    opacity: 1;
+}
+
+
+/* sectiom title */
+
+.title {
+    font-family: fantasy;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 34px;
+    color: var(--title);
+    margin-bottom: 25px;
+}
+
+
+/* section links */
+
+#ul__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ul__container li {
+    margin-right: 5%;
+}
+
+#ul__container li a {
+    font-family: 'Steinbeck';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: .5;
+}
+
+#ul__container li a:hover {
+    opacity: 1;
+}
+
+
+/* section row */
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* section card */
+
+.card {
+    width: 174px;
+    height: 252px;
+    margin-right: 45px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 30px #100f0f, 3px 3px 30px rgb(0 0 0 / 16%);
+    background-image: url(../images/card-bg.png);
+    background-repeat: repeat-y;
+    background-position-x: right;
+    background-position-y: top;
+}
+
+
+/* card content */
+
+.card_content {
+    padding: 12px;
+}
+
+.card__text {
+    font-family: 'Steinbeck';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--text);
+}
+
+.card__text span {
+    font-family: 'Steinbeck';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* card content icon */
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    margin-top: 7%;
+}
+
+.icons i {
+    margin-right: 8px;
 }
