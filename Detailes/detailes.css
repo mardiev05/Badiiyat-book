@@ -287,6 +287,13 @@ section {
 }
 
 
+/* about__author */
+
+.about__author {
+    display: none;
+}
+
+
 /* section ul */
 
 .lists {
@@ -350,4 +357,32 @@ section {
     font-size: 20px;
     line-height: 20px;
     color: var(--text);
+}
+
+
+/* book quotes */
+
+.book__quotes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.book__quotes-card {
+    width: 48%;
+    background: linear-gradient(263.94deg, #161616 0%, #1E1E1E 98.06%);
+    padding: 30px;
+    font-family: 'Steinbeck';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.book__quotes-icons {
+    text-align: end;
 }
