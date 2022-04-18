@@ -277,3 +277,77 @@ button:hover {
 .main__btn:hover {
     opacity: 1;
 }
+
+
+/* section */
+
+section {
+    padding: 20px 50px;
+    background-color: rgba(25, 25, 25, 1);
+}
+
+
+/* section ul */
+
+.lists {
+    display: flex;
+    margin-top: 55px;
+    margin-bottom: 35px;
+}
+
+.lists__item {
+    font-family: 'Steinbeck';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 5%;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.lists__item:hover {
+    opacity: 1;
+}
+
+
+/* section author card */
+
+.author__card {
+    display: flex;
+    align-items: center;
+}
+
+.author__card-info {
+    margin-left: 2%;
+}
+
+.author__card-name {
+    font-family: 'Rotterburg Stylish FREE';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 28px;
+    color: var(--text);
+    margin-bottom: 1%;
+}
+
+.author__card-text {
+    font-family: monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148.4%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4%;
+}
+
+.author__card-more {
+    font-family: 'Steinbeck';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--text);
+}
