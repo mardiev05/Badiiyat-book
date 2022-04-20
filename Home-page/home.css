@@ -234,6 +234,10 @@ main {
     background-position-y: top;
 }
 
+.card img {
+    width: 100%;
+}
+
 
 /* card content */
 

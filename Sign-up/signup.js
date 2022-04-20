@@ -1,5 +1,7 @@
 let form = document.querySelector("#form");
-let url = "https://bookzon.herokuapp.com/api/";
+// let url = "https://bookzon.herokuapp.com/api/";
+let url = "http://localhost:8000/api";
+
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -25,7 +27,7 @@ form.addEventListener("submit", function(e) {
     };
 
     (async() => {
-        let response = await fetch(url + "sign-up", {
+        let response = await fetch(url + "/sign-up", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

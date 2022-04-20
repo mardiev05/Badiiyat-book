@@ -1,4 +1,5 @@
-const url = "https://bookzon.herokuapp.com/api";
+// const url = "https://bookzon.herokuapp.com/api";
+const url = "http://localhost:8000/api";
 
 let author = {
     firstName: "William",
@@ -21,7 +22,7 @@ form.addEventListener("submit", (e) => {
         lastName: e.target.lastName.value,
         date_of_birth: e.target.date_of_birth.value,
         date_of_death: e.target.date_of_death.value,
-        user: user._id,
+        // user: user._id,
     };
 
     (async() => {
@@ -29,11 +30,15 @@ form.addEventListener("submit", (e) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer : " + localStorage.getItem("token"),
+                "Authorization": "Bearer " + localStorage.getItem("token"),
             },
             body: JSON.stringify(authors),
         });
         let data = await res.json();
         console.log(data);
+        if (data.success) {
+            e.target.reset()
+        }
     })();
+
 });
