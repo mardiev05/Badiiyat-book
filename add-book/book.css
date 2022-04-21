@@ -132,7 +132,8 @@ button:hover {
     width: 50%;
 }
 
-input {
+input,
+textarea {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;

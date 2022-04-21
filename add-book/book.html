@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link rel="stylesheet" href="authors.css">
+    <link rel="stylesheet" href="book.css">
     <title>Add Authors</title>
 </head>
 
@@ -35,22 +35,25 @@
         <div class="img__container">
             <img src="../images/avloniy.png" alt="">
             <input type="file" name="file">
-            <h2 class="title">Hello</h2>
+            <h2 class="title">Ulugbek hazinasi</h2>
             <button id="upload">Upload Image</button>
         </div>
         <div class="inputs__container">
-            <h1 class="inputs__title">Add Author</h1>
+            <h1 class="inputs__title">Add Book</h1>
             <form id="form">
-                <input type="text" name="firstName" placeholder="First Name">
-                <input type="text" name="lastName" placeholder="Last Name">
-                <input type="date" name="date_of_birth" placeholder="date of Birth">
-                <input type="date" name="date_of_death" placeholder="date of Death">
+                <input type="text" name="title" placeholder="Title">
+                <input type="number" name="pages" placeholder="Pages">
+                <input type="date" name="year" placeholder="Year">
+                <input type="number" name="price" placeholder="Price">
+                <input type="text" name="country" placeholder="Country">
+                <input type="text" name="author" placeholder="Author">
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
                 <button id="submit" type="submit">Submit</button>
             </form>
         </div>
     </div>
 
-    <script src="authors.js"></script>
+    <script src="book.js"></script>
 </body>
 
 </html>
