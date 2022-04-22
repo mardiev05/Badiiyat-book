@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="../Home-page/home.html">Home</a></li>
-                <li><a href="about.html">Nasr</a></li>
+                <li><a href="../shelf/shelf.html">Shelf</a></li>
                 <li><a href="services.html">Nazm</a></li>
                 <li><a href="../add-book/book.html">Add Book</a></li>
                 <li><a href="../add-authors/authors.html">Add Authors</a></li>
@@ -43,10 +43,12 @@
             <form id="form">
                 <input type="text" name="title" placeholder="Title">
                 <input type="number" name="pages" placeholder="Pages">
-                <input type="date" name="year" placeholder="Year">
+                <input type="number" name="year" placeholder="Year">
                 <input type="number" name="price" placeholder="Price">
                 <input type="text" name="country" placeholder="Country">
-                <input type="text" name="author" placeholder="Author">
+                <select name="author" id="author">
+                    <option value="">Select Author</option>
+                </select>
                 <textarea name="description" id="description" cols="30" rows="10"></textarea>
                 <button id="submit" type="submit">Submit</button>
             </form>
