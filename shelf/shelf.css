@@ -248,15 +248,22 @@ main {
 .folder {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .star__text {
     font-family: 'Visuelt Pro';
     font-style: normal;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 144.4%;
     color: rgba(255, 255, 255, 0.6);
+}
+
+.country {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .card__text {
@@ -279,15 +286,3 @@ main {
 
 
 /* card content icon */
-
-.icons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
-    margin-top: 7%;
-}
-
-.icons i {
-    margin-right: 8px;
-}

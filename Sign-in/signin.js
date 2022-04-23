@@ -11,7 +11,6 @@ form.addEventListener("submit", (e) => {
         email: e.target[0].value,
         password: e.target[1].value,
     };
-    console.log(login);
 
     (async() => {
         let res = await fetch(url + "/login", {
@@ -26,7 +25,7 @@ form.addEventListener("submit", (e) => {
 
         if (data.success) {
             localStorage.setItem("token", data.token);
-            localStorage.setItem("user", JSON.stringify(data.user));
+            localStorage.setItem("user", JSON.stringify(data.user._id));
             Swal.fire({
                 icon: "success",
                 title: "Success",
