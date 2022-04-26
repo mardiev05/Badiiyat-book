@@ -14,51 +14,87 @@
     <div class="container">
 
         <header>
-            <div class="header__card">
+            <div id="myAccount__link" class="header__card">
                 <span class="header__span">1</span>
                 <p class="header__name">My account</p>
             </div>
 
-            <div class="header__card">
+            <div id="security__link" class="header__card">
                 <span class="header__span">2</span>
                 <p class="header__name">Security</p>
             </div>
 
-            <div class="header__card">
-                <span class="header__span">1</span>
-                <p class="header__name">Make Payment</p>
+            <div id="settings__link" class="header__card">
+                <span class="header__span">3</span>
+                <p class="header__name">Settings</p>
             </div>
         </header>
 
         <section>
 
-            <div class="section__img-container">
-                <img src="../images/my-profile.png" alt="">
-            </div>
-
-            <form id="form">
-
-                <h3 class="form__title">My Profile</h3>
-
-                <div class="fName">
-                    <label for="firstName">First Name</label><br>
-                    <input type="text" id="firstName" placeholder="Please enter your first name">
+            <div class="myAccount">
+                <div class="section__img-container">
+                    <img src="../images/my-profile.png" alt="">
                 </div>
 
-                <div class="lName">
-                    <label for="lastName">Last Name</label> <br>
-                    <input type="text" id="lastName" placeholder="Please enter your last name">
-                </div>
+                <form id="form">
 
-                <div class="phone__email">
-                    <div class="phone">
-                        <label for="phone">Phone</label><br>
-                        <input type="number" id="phone" placeholder="Please enter your phone number">
+                    <h3 class="form__title">My Profile</h3>
+
+                    <div class="fName">
+                        <label for="firstName">First Name</label><br>
+                        <input type="text" id="firstName" placeholder="Please enter your first name">
                     </div>
 
-                    <div class="email">
-                        <label for="email">Email</label><br>
-                        <input type="email" id="email" placeholder="Please enter your email">
+                    <div class="lName">
+                        <label for="lastName">Last Name</label> <br>
+                        <input type="text" id="lastName" placeholder="Please enter your last name">
+                    </div>
+
+                    <div class="phone__email">
+                        <div class="phone">
+                            <label for="phone">Phone</label><br>
+                            <input type="number" id="phone" placeholder="Please enter your phone number">
+                        </div>
+
+                        <div class="email">
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" placeholder="Please enter your email">
+                        </div>
+                    </div>
+
+                    <div class="form__line"></div>
+
+                    <div class="btn__container">
+                        <button id="btn" type="submit">Save Changes</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <form class="hide" id="security__form">
+
+                <h3 class="form__title">Change Or Recover Your Password:</h3>
+
+                <div class="sec__email">
+                    <label for="secEmail">Email</label><br>
+                    <input type="email" id="secEmail" placeholder="admin@mail.ru">
+                </div>
+
+                <div class="sec__password">
+                    <label for="secPassword">Current password</label> <br>
+                    <input type="password" id="secPassword" placeholder="*********">
+                </div>
+
+                <div class="new__passwords">
+                    <div class="newPassword">
+                        <label for="new">New Password</label><br>
+                        <input type="password" id="new" placeholder="*********">
+                    </div>
+
+                    <div class="confPassword">
+                        <label for="conf">Confirm Password</label><br>
+                        <input type="email" id="conf" placeholder="********">
                     </div>
                 </div>
 
@@ -70,7 +106,30 @@
 
             </form>
 
+            <form class="hide" id="settings">
+
+                <h3 class="form__title">Settings</h3>
+
+                <div class="sec__email">
+                    <label for="secEmail">Email</label><br>
+                    <input type="email" id="secEmail" placeholder="admin@mail.ru">
+                </div>
+
+                <div class="radioBtn">
+                    <div class="ball"></div>
+                </div>
+
+                <div class="form__line"></div>
+
+                <div class="btn__container">
+                    <button id="btn" type="submit">Save Changes</button>
+                </div>
+
+            </form>
+
         </section>
+
+
 
     </div>
 
