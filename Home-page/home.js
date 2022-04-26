@@ -11,15 +11,13 @@ let url = "http://localhost:8000/api";
 
     data.payload.forEach((item) => {
 
-        console.log(item._id)
-
-        var aTag = `<a href="http://127.0.0.1:5501/Main/main.html">${item.firstName + " " + item.lastName}</a>`;
+        var aTag = `<a href="http://127.0.0.1:5501/Main/main.html?id=${item._id}">${item.firstName + " " + item.lastName}</a>`;
 
         let card = `
             <div class="card">
                 <img src="../images/avloniy.png" alt="">
                 <div class="card_content">
-                    <p class="card__text" onclick="getUserId(${item._id})">${aTag}<br>
+                    <p class="card__text">${aTag}<br>
                         <span>${new Date(item.date_of_birth).getFullYear()} - ${new Date(item.date_of_death).getFullYear()}</span>
                     </p>
                     <div class="icons">
@@ -37,11 +35,6 @@ let url = "http://localhost:8000/api";
     });
 })();
 
-
-let getUserId = (id) => {
-    localStorage.setItem("id", id);
-    console.log(localStorage.getItem("id"));
-};
 
 
 

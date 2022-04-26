@@ -146,6 +146,20 @@ input {
     margin-bottom: 10%;
 }
 
+#description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #AAAAAA;
+    height: 100px;
+    border: 1px solid #B4B4BB;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-bottom: 5%;
+}
+
 #submit {
     font-family: 'Red Hat Display';
     font-style: normal;

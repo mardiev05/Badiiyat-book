@@ -190,7 +190,7 @@ label {
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #ff0000;
+    background-color: red;
     transform: scale(.8);
     transition: .4s linear;
     -webkit-transform: scale(.8);

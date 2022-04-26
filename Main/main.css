@@ -15,6 +15,7 @@
 
 body {
     height: 100vh;
+    background-color: rgba(25, 25, 25, 1);
 }
 
 
@@ -84,7 +85,6 @@ button:hover {
 
 section {
     display: flex;
-    background-color: rgba(25, 25, 25, 1);
     padding-bottom: 50px;
     background-image: url(images/ornament.png);
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@ section {
 }
 
 .section__img-container {
-    width: 35%;
+    width: 33%;
 }
 
 .img__card {
@@ -121,7 +121,7 @@ section {
 }
 
 .birth {
-    font-family: cursive;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -150,7 +150,7 @@ section {
 
 .section__content {
     padding: 20px 65px 0 65px;
-    width: 65%;
+    width: 67%;
 }
 
 .content__title {
@@ -508,4 +508,23 @@ section {
     .creature__text {
         font-size: 8px;
     }
+}
+
+.delete__container {
+    text-align: end;
+    margin-right: 4%;
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+}
+
+#delete {
+    font-size: 17px;
+    padding: 7px 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
 }

@@ -12,6 +12,7 @@ form.addEventListener("submit", (e) => {
         lastName: e.target.lastName.value,
         date_of_birth: e.target.date_of_birth.value,
         date_of_death: e.target.date_of_death.value,
+        description: e.target.description.value,
     };
     (async() => {
         let res = await fetch(url + "/authors", {

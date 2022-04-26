@@ -254,6 +254,10 @@ main {
     color: var(--text);
 }
 
+.card__text a {
+    color: var(--text);
+}
+
 .card__text span {
     font-family: 'Steinbeck';
     font-style: normal;
