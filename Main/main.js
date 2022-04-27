@@ -45,19 +45,6 @@ const userId = window.location.search.slice(4);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const deleteBtn = document.querySelector("#delete");
 deleteBtn.addEventListener("click", async() => {
     let res = await fetch(url + "/authors/" + userId + "", {

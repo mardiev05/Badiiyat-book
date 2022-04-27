@@ -17,6 +17,7 @@
 
 body {
     height: 100vh;
+    background-color: rgba(25, 25, 25, 1);
 }
 
 
@@ -90,7 +91,6 @@ button:hover {
     grid-template-columns: 1fr 3fr;
     grid-gap: 3%;
     padding: 20px 50px;
-    background-color: rgba(25, 25, 25, 1);
 }
 
 
@@ -407,6 +407,10 @@ section {
     background-position-x: right;
     background-position-y: top;
     text-align: center;
+}
+
+.footer__card img {
+    width: 100%;
 }
 
 

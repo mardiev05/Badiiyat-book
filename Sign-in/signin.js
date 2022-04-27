@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
 
         if (data.success) {
             localStorage.setItem("token", data.token);
-            localStorage.setItem("user", JSON.stringify(data.user._id));
+            localStorage.setItem("user", JSON.stringify(data.user));
             Swal.fire({
                 icon: "success",
                 title: "Success",
