@@ -82,6 +82,34 @@ button:hover {
 }
 
 
+/* bar */
+
+.bar {
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    display: none;
+    position: absolute;
+    right: 7px;
+    top: 80px;
+    z-index: 999;
+    padding: 15px 40px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 3px 3px 30px #000000, 3px 3px 30px rgb(0 0 0 / 16%);
+}
+
+.bar a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
 /* container */
 
 .container {
@@ -280,4 +308,9 @@ main {
 
 .icons i {
     margin-right: 8px;
+}
+
+.hide {
+    display: flex;
+    flex-direction: column;
 }

@@ -81,7 +81,8 @@ label {
 #firstName,
 #lastName,
 #secEmail,
-#secPassword {
+#secPassword,
+#setEmail {
     width: 90%;
     height: 44px;
     padding: 20px;
@@ -143,7 +144,9 @@ label {
     text-align: end;
 }
 
-#btn {
+#btn,
+#secBtn,
+#setBtn {
     background-color: #152540;
     border-radius: 4px;
     border: none;
@@ -157,7 +160,9 @@ label {
     cursor: pointer;
 }
 
-#btn:hover {
+#btn:hover,
+#secBtn:hover,
+#setBtn:hover {
     background-color: #1263eb;
 }
 

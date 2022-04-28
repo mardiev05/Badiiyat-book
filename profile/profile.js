@@ -6,12 +6,12 @@ const lastN = document.querySelector("#lastName");
 const accPhone = document.querySelector("#phone");
 const accEmail = document.querySelector("#email");
 let user = JSON.parse(localStorage.getItem("user"));
-console.log(user);
 
 firsN.value = user.firstName;
 lastN.value = user.lastName;
 accPhone.value = user.phone;
 accEmail.value = user.email;
+
 
 accForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -36,14 +36,15 @@ accForm.addEventListener("submit", (e) => {
         let data = await res.json();
         console.log(data)
         if (data.success) {
-            localStorage.setItem("user", data.payload)
-        }
+            localStorage.setItem("user", data.payload);
+        };
     })();
 });
 
 
 
 // top bar
+const home = document.querySelector("#homeLink");
 const myAccountLink = document.querySelector("#myAccount__link");
 const myAccountCard = document.querySelector(".myAccount");
 const securityLink = document.querySelector("#security__link");
@@ -51,6 +52,10 @@ const securityForm = document.querySelector("#security__form");
 const settingsLink = document.querySelector("#settings__link");
 const settingscard = document.querySelector("#settings");
 const ball = document.querySelector(".ball");
+
+home.addEventListener("click", () => {
+    window.location.assign("http://127.0.0.1:5501/Home-page/home.html");
+});
 
 myAccountLink.addEventListener("click", () => {
     myAccountCard.classList.remove("hide");

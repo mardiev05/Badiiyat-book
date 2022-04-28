@@ -39,7 +39,7 @@ let url = "http://localhost:8000/api";
 
 
 
-
+const bar = document.querySelector(".bar")
 document.querySelector("#profile__img").addEventListener("click", () => {
-    window.location.assign("http://127.0.0.1:5501/Sign-in/signin.html");
+    bar.classList.toggle("hide")
 });
