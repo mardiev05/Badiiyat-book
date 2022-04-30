@@ -13,6 +13,7 @@ accPhone.value = user.phone;
 accEmail.value = user.email;
 
 
+// MY ACCOUNT
 accForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let userInfo = {
@@ -21,8 +22,6 @@ accForm.addEventListener("submit", (e) => {
         phone: e.target.phone.value,
         email: e.target.email.value,
     };
-
-
 
     (async() => {
         let res = await fetch(url + "/users/", {
@@ -34,12 +33,77 @@ accForm.addEventListener("submit", (e) => {
             body: JSON.stringify(userInfo),
         });
         let data = await res.json();
-        console.log(data)
+        console.log(data.payload)
+        let jsonUser = JSON.stringify(data.payload)
         if (data.success) {
-            localStorage.setItem("user", data.payload);
+            localStorage.setItem("user", jsonUser);
         };
     })();
 });
+
+
+
+
+// SECURITY
+const secForm = document.querySelector("#security__form");
+
+const secEmail = document.querySelector("#secEmail")
+
+secEmail.value = user.email
+
+secForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let newPassword = {
+        password: e.target.new.value,
+    };
+
+    let login = {
+        email: e.target.secEmail.value,
+        password: e.target.secPassword.value,
+    };
+
+    (async() => {
+        let res = await fetch(url + "/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(login),
+        });
+        let data = await res.json();
+        console.log(data);
+
+        if (data.success) {
+            (async() => {
+                let res = await fetch(url + "/users/", {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: "Baerer " + localStorage.getItem("token"),
+                    },
+                    body: JSON.stringify(newPassword)
+                });
+                let data = await res.json();
+                console.log(data);
+            })();
+        }
+    })();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -16,7 +16,7 @@
         <header>
             <div id="homeLink" class="header__card">
                 <span class="header__span">1</span>
-                <p class="header__name">Home</p>
+                <p class="header__link">Home</p>
             </div>
 
             <div id="myAccount__link" class="header__card">
@@ -34,6 +34,7 @@
                 <p class="header__name">Settings</p>
             </div>
         </header>
+
         <section>
 
             <div class="myAccount">
@@ -76,29 +77,31 @@
                 </form>
             </div>
 
+
+
             <form class="hide" id="security__form">
 
                 <h3 class="form__title">Change Or Recover Your Password:</h3>
 
                 <div class="sec__email">
                     <label for="secEmail">Email</label><br>
-                    <input type="email" id="secEmail" placeholder="admin@mail.ru">
+                    <input type="email" id="secEmail" name="secEmail" placeholder="admin@mail.ru">
                 </div>
 
                 <div class="sec__password">
                     <label for="secPassword">Current password</label> <br>
-                    <input type="password" id="secPassword" placeholder="*********">
+                    <input type="password" id="secPassword" name="secPassword" placeholder="*********">
                 </div>
 
                 <div class="new__passwords">
                     <div class="newPassword">
                         <label for="new">New Password</label><br>
-                        <input type="password" id="new" placeholder="*********">
+                        <input type="password" id="new" name="new" placeholder="*********">
                     </div>
 
                     <div class="confPassword">
                         <label for="conf">Confirm Password</label><br>
-                        <input type="email" id="conf" placeholder="********">
+                        <input type="password" id="conf" name="conf" placeholder="********">
                     </div>
                 </div>
 
@@ -133,11 +136,8 @@
 
         </section>
 
-
-
     </div>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="profile.js"></script>
 </body>
 

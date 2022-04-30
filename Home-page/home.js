@@ -41,5 +41,11 @@ let url = "http://localhost:8000/api";
 
 const bar = document.querySelector(".bar")
 document.querySelector("#profile__img").addEventListener("click", () => {
-    bar.classList.toggle("hide")
+    bar.classList.toggle("hide");
 });
+
+const logOut = document.querySelector("#logout");
+
+logOut.addEventListener("click", () => {
+    localStorage.clear()
+})
