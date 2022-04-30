@@ -54,6 +54,9 @@ secEmail.value = user.email
 secForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+
+    let newPass = e.target.new.value;
+    let confPass = e.target.conf.value;
     let newPassword = {
         password: e.target.new.value,
     };
@@ -74,34 +77,75 @@ secForm.addEventListener("submit", (e) => {
         let data = await res.json();
         console.log(data);
 
-        if (data.success) {
-            (async() => {
-                let res = await fetch(url + "/users/", {
-                    method: "PATCH",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: "Baerer " + localStorage.getItem("token"),
-                    },
-                    body: JSON.stringify(newPassword)
-                });
-                let data = await res.json();
-                console.log(data);
-            })();
+        if (data.success && newPass === confPass) {
+            Swal.fire({
+                title: "Do you want to save the changes?",
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: "Save",
+                denyButtonText: `Don't save`,
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    Swal.fire("Saved!", "", "success");
+                    (async() => {
+                        let res = await fetch(url + "/users/", {
+                            method: "PATCH",
+                            headers: {
+                                "Content-Type": "application/json",
+                                Authorization: "Baerer " + localStorage.getItem("token"),
+                            },
+                            body: JSON.stringify(newPassword),
+                        });
+                        let data = await res.json();
+                        if (newPass == confPass) {
+                            Swal.fire(
+                                "Good job!",
+                                "You clicked the button!",
+                                "success"
+                            );
+                        }
+                    })();
+                } else if (result.isDenied) {
+                    Swal.fire("Changes are not saved", "", "info");
+                }
+            });
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: data.msg,
+                footer: '<a href="">Why do I have this issue?</a>',
+            });
         }
     })();
 })
 
 
 
+const settings = document.querySelector("#settings");
+const setBtn = document.querySelector("#setBtn");
 
+settings.addEventListener("submit", (e) => {
+    e.preventDefault()
 
+    let newEmail = {
+        email: e.target.setEmail.value
+    };
 
-
-
-
-
-
-
+    (async() => {
+        let res = await fetch(url + "/users", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: "Baerer " + localStorage.getItem("token"),
+            },
+            body: JSON.stringify(newEmail),
+        });
+        let data = await res.json();
+        console.log(data);
+    })();
+});
 
 
 
