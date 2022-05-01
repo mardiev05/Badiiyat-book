@@ -1,6 +1,7 @@
+let url = "https://bookzon.herokuapp.com/api/";
+// let url = "http://localhost:8000/api";
+
 let form = document.querySelector("#form");
-// let url = "https://bookzon.herokuapp.com/api/";
-let url = "http://localhost:8000/api";
 
 
 form.addEventListener("submit", function(e) {

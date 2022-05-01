@@ -1,4 +1,6 @@
-const url = "http://localhost:8000/api";
+let url = "https://bookzon.herokuapp.com/api";
+// const url = "http://localhost:8000/api";
+
 
 const accForm = document.querySelector("#form");
 const firsN = document.querySelector("#firstName");

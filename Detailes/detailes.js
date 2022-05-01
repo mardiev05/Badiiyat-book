@@ -1,4 +1,5 @@
-const url = "http://localhost:8000/api";
+let url = "https://bookzon.herokuapp.com/api";
+// const url = "http://localhost:8000/api";
 let bookId = window.location.search.slice(4);
 
 
@@ -18,7 +19,7 @@ let bookId = window.location.search.slice(4);
     let card = `
           <div class="main__title-container">
                         <h1 class="main__title">${item.title}</h1>
-                        <p class="main__title-name">${item.author.firstName + " " + item.author.lastName}<i class="fa-solid fa-star"> 4.1</i></p>
+                        <p class="main__title-name">${item?.author?.firstName + " " + item?.author?.lastName}<i class="fa-solid fa-star"> 4.1</i></p>
                     </div>
 
                     <ul class="main__ul-container">

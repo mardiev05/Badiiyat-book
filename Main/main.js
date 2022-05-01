@@ -1,4 +1,5 @@
-let url = "http://localhost:8000/api";
+let url = "https://bookzon.herokuapp.com/api";
+// let url = "http://localhost:8000/api";
 
 const userId = window.location.search.slice(4);
 
@@ -6,7 +7,6 @@ const userId = window.location.search.slice(4);
     let res = await fetch(url + "/authors/" + userId + "");
     let data = await res.json()
     console.log(data.payload)
-
 
     let item = data.payload;
     const contentTitleRow = document.querySelector(".content__title-row");
@@ -18,7 +18,6 @@ const userId = window.location.search.slice(4);
 
     const imgDate = document.querySelector(".img__info-row");
     let imgDateCard = `
-
         <div class="img__info">
                     <div class="dateOfBirth">
                         <p class="birth__title">Tavallud sanasi</p>
@@ -34,9 +33,34 @@ const userId = window.location.search.slice(4);
                         <p class="birth__city">Toshkent, Uzbekistan</p>
                     </div>
                 </div>
-
     `;
-    imgDate.innerHTML = imgDateCard
+    imgDate.innerHTML = imgDateCard;
+
+
+    (async() => {
+        let res = await fetch(url + "/books/author/" + userId + "", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: "Baerer " + localStorage.getItem("token")
+            }
+        });
+        let data = await res.json();
+        console.log(data.payload)
+
+        data.payload.map((item) => {
+            let card = `
+                 <div class="creature__card">
+                        <img src="../images/asarlari.png" alt="">
+                        <h5 class="creature__card-title">${item?.title}</h5>
+                        <p class="creature__text">${item?.author?.firstName + " " + item?.author?.lastName}</p>
+                    </div>
+            `;
+            document.querySelector(".creature__row").innerHTML += card;
+
+        })
+
+    })();
 
 })();
 

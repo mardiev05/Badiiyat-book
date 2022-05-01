@@ -1,5 +1,5 @@
-// const url = "https://bookzon.herokuapp.com/api";
-const url = "http://localhost:8000/api";
+const url = "https://bookzon.herokuapp.com/api";
+// const url = "http://localhost:8000/api";
 
 let form = document.querySelector("#form");
 let user = JSON.parse(localStorage.getItem("user"));
@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer " + localStorage.getItem("token"),
+                Authorization: "Bearer " + localStorage.getItem("token"),
             },
             body: JSON.stringify(authors),
         });
@@ -29,5 +29,6 @@ form.addEventListener("submit", (e) => {
             e.target.reset()
         }
     })();
+    window.location.assign("http://127.0.0.1:5501/Home-page/home.html");
 
 });

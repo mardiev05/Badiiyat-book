@@ -1,5 +1,5 @@
-// let url = "https://bookzon.herokuapp.com/api/";
-let url = "http://localhost:8000/api";
+let url = "https://bookzon.herokuapp.com/api";
+// let url = "http://localhost:8000/api";
 
 
 
