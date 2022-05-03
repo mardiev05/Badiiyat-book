@@ -31,6 +31,8 @@ header {
     align-items: center;
     padding: 0 50px;
     border-bottom: groove;
+    position: fixed;
+    z-index: 9999;
 }
 
 .header__title {
@@ -96,6 +98,7 @@ button:hover {
 
 main {
     width: 100%;
+    margin-top: 75px;
 }
 
 .search__title {

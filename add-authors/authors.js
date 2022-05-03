@@ -12,7 +12,6 @@ form.addEventListener("submit", (e) => {
         lastName: e.target.lastName.value,
         date_of_birth: e.target.date_of_birth.value,
         date_of_death: e.target.date_of_death.value,
-        description: e.target.description.value,
     };
     (async() => {
         let res = await fetch(url + "/authors", {
@@ -29,6 +28,8 @@ form.addEventListener("submit", (e) => {
             e.target.reset()
         }
     })();
-    window.location.assign("http://127.0.0.1:5501/Home-page/home.html");
+    setTimeout(() => {
+        window.location.assign("http://127.0.0.1:5501/Home-page/home.html");
+    }, 1000);
 
 });

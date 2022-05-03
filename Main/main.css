@@ -30,6 +30,8 @@ header {
     align-items: center;
     padding: 0 50px;
     border-bottom: groove;
+    position: fixed;
+    z-index: 1;
 }
 
 .header__title {
@@ -90,6 +92,7 @@ section {
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-position-x: right;
+    padding-top: 85px;
 }
 
 .section__img-container {

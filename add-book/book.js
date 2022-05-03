@@ -50,4 +50,7 @@ form.addEventListener("submit", (e) => {
             e.target.reset()
         }
     })();
+    setTimeout(() => {
+        window.location.assign("http://127.0.0.1:5501/shelf/shelf.html");
+    }, 1000);
 })

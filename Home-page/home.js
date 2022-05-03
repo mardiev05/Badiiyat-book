@@ -36,9 +36,24 @@ let url = "https://bookzon.herokuapp.com/api";
 })();
 
 
+// search
+let search = document.querySelector("#search");
+const searchBtn = document.querySelector("#search__btn");
+
+searchBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (search.value) {
+        localStorage.setItem("search", search.value)
+        console.log("true")
+        setTimeout(() => {
+            window.location.assign("http://127.0.0.1:5501/search/search.html");
+        }, 1000);
+    }
+});
 
 
-
+// dropdown bar
 const bar = document.querySelector(".bar")
 document.querySelector("#profile__img").addEventListener("click", () => {
     bar.classList.toggle("hide");

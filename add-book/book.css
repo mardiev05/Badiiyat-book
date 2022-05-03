@@ -158,6 +158,10 @@ textarea {
     margin-bottom: 10%;
 }
 
+textarea#description {
+    height: 150px;
+}
+
 #submit {
     font-family: 'Red Hat Display';
     font-style: normal;

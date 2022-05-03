@@ -70,7 +70,7 @@ deleteBtn.addEventListener("click", () => {
         confirmButtonText: "Yes, delete it!",
     }).then(async(result) => {
         if (result.isConfirmed) {
-            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+
             let res = await fetch(url + "/books/" + bookId + "", {
                 method: "DELETE",
                 headers: {
@@ -79,6 +79,15 @@ deleteBtn.addEventListener("click", () => {
                 },
             });
             let data = await res.json();
+            console.log(data)
+            if (data.success) {
+                Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            } else {
+                Swal.fire({
+                    title: data.error,
+                    icon: "warning",
+                });
+            }
         }
     });
 });
